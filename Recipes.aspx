@@ -5,10 +5,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
+
+        
+
+         <h3> Wicked Easy Recipes</h3>  
+        Using 5 Ingredients or Less! <br />
+
+        <a href="Default.aspx">Home</a>
+        <a href="NewRecipe.aspx">New Recipe</a>
+        <a href="AboutUs.aspx">About Us</a>
+        <a href="ContactUs.aspx">Contact</a> <br />
     
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_recpie %>" DeleteCommand="DELETE FROM [Table] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Table] ([Recipe_Name], [Submitted_By], [Ingredient#1], [Ingredient#2], [Ingredient#3], [Ingredient#4], [Ingredient#5], [Preparation], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @column1, @column2, @column3, @column4, @column5, @Preparation, @Notes)" SelectCommand="SELECT * FROM [Table] WHERE ([Id] = @Id)" UpdateCommand="UPDATE [Table] SET [Recipe_Name] = @Recipe_Name, [Submitted_By] = @Submitted_By, [Ingredient#1] = @column1, [Ingredient#2] = @column2, [Ingredient#3] = @column3, [Ingredient#4] = @column4, [Ingredient#5] = @column5, [Preparation] = @Preparation, [Notes] = @Notes WHERE [Id] = @Id">
             <DeleteParameters>
@@ -42,6 +54,8 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
+
+        
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Height="53px" Width="288px">
             <Fields>
                 <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe_Name" SortExpression="Recipe_Name" />
@@ -57,6 +71,9 @@
             </Fields>
         </asp:DetailsView>
     
+        <br />
+        <br />
+        &copy; 2013. 6K:183 Software Design & Development 
     </div>
     </form>
 </body>

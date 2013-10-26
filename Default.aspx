@@ -5,10 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div >
     
       <h3>Wicked Easy Recipes</h3>  
         Using 5 Ingredients or Less! <br />
@@ -47,6 +49,9 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
+
+       
+            
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe_Name" SortExpression="Recipe_Name" />
@@ -54,7 +59,12 @@
                 <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="Recipes.aspx?Id={0}" HeaderText="Submitted_By" Text="Select" />
             </Columns>
         </asp:GridView>
-    
+                
+            
+    <br />
+    <br />
+
+        &copy; 2013. 6K:183 Software Design & Development 
     </div>
     </form>
 </body>

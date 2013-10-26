@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -47,6 +49,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
+       
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" Height="53px" Width="288px" DefaultMode="Insert">
             <Fields>
                 <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe_Name" SortExpression="Recipe_Name" />
@@ -61,7 +64,11 @@
                 <asp:CommandField CancelText="" InsertText="Save" ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
-    
+ 
+
+        <br />
+        <br />
+        &copy; 2013. 6K:183 Software Design & Development 
     </div>
     </form>
 </body>
