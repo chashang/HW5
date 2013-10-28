@@ -20,38 +20,38 @@
         <a href="AboutUs.aspx">About Us</a>
         <a href="ContactUs.aspx">Contact</a> <br />
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_recpie %>" DeleteCommand="DELETE FROM [Table] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Table] ([Recipe_Name], [Submitted_By], [Ingredient#1], [Ingredient#2], [Ingredient#3], [Ingredient#4], [Ingredient#5], [Preparation], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @column1, @column2, @column3, @column4, @column5, @Preparation, @Notes)" SelectCommand="SELECT * FROM [Table]" UpdateCommand="UPDATE [Table] SET [Recipe_Name] = @Recipe_Name, [Submitted_By] = @Submitted_By, [Ingredient#1] = @column1, [Ingredient#2] = @column2, [Ingredient#3] = @column3, [Ingredient#4] = @column4, [Ingredient#5] = @column5, [Preparation] = @Preparation, [Notes] = @Notes WHERE [Id] = @Id">
+        <br />
+
+       
+            
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_recpie %>" DeleteCommand="DELETE FROM [Table] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Table] ([Recipe_Name], [Submitted_By], [Ingredient1], [Ingredient2], [Ingredient3], [Ingredient4], [Ingredient5], [Preparation], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @Ingredient1, @Ingredient2, @Ingredient3, @Ingredient4, @Ingredient5, @Preparation, @Notes)" SelectCommand="SELECT * FROM [Table]" UpdateCommand="UPDATE [Table] SET [Recipe_Name] = @Recipe_Name, [Submitted_By] = @Submitted_By, [Ingredient1] = @Ingredient1, [Ingredient2] = @Ingredient2, [Ingredient3] = @Ingredient3, [Ingredient4] = @Ingredient4, [Ingredient5] = @Ingredient5, [Preparation] = @Preparation, [Notes] = @Notes WHERE [Id] = @Id">
             <DeleteParameters>
                 <asp:Parameter Name="Id" Type="Int32" />
             </DeleteParameters>
             <InsertParameters>
                 <asp:Parameter Name="Recipe_Name" Type="String" />
                 <asp:Parameter Name="Submitted_By" Type="String" />
-                <asp:Parameter Name="column1" Type="String" />
-                <asp:Parameter Name="column2" Type="String" />
-                <asp:Parameter Name="column3" Type="String" />
-                <asp:Parameter Name="column4" Type="String" />
-                <asp:Parameter Name="column5" Type="String" />
+                <asp:Parameter Name="Ingredient1" Type="String" />
+                <asp:Parameter Name="Ingredient2" Type="String" />
+                <asp:Parameter Name="Ingredient3" Type="String" />
+                <asp:Parameter Name="Ingredient4" Type="String" />
+                <asp:Parameter Name="Ingredient5" Type="String" />
                 <asp:Parameter Name="Preparation" Type="String" />
                 <asp:Parameter Name="Notes" Type="String" />
             </InsertParameters>
             <UpdateParameters>
                 <asp:Parameter Name="Recipe_Name" Type="String" />
                 <asp:Parameter Name="Submitted_By" Type="String" />
-                <asp:Parameter Name="column1" Type="String" />
-                <asp:Parameter Name="column2" Type="String" />
-                <asp:Parameter Name="column3" Type="String" />
-                <asp:Parameter Name="column4" Type="String" />
-                <asp:Parameter Name="column5" Type="String" />
+                <asp:Parameter Name="Ingredient1" Type="String" />
+                <asp:Parameter Name="Ingredient2" Type="String" />
+                <asp:Parameter Name="Ingredient3" Type="String" />
+                <asp:Parameter Name="Ingredient4" Type="String" />
+                <asp:Parameter Name="Ingredient5" Type="String" />
                 <asp:Parameter Name="Preparation" Type="String" />
                 <asp:Parameter Name="Notes" Type="String" />
                 <asp:Parameter Name="Id" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <br />
-
-       
-            
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe_Name" SortExpression="Recipe_Name" />

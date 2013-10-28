@@ -14,9 +14,10 @@
 }
 
 
-#DetailsView1  { width:80%; margin:auto; border:solid 10px white; 
+#DetailsView1  { width:60px; margin:auto; border:solid 10px white; 
               border-collapse:collapse; text-align:center; font-family: "Cambria"; 
-              color: white; background-color: #F08080}
+              color: white; background-color: #F08080
+}
 
 div {
     margin-left: auto;
